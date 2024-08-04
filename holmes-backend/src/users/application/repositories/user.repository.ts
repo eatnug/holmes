@@ -9,4 +9,4 @@ export interface UserRepository {
   updateUser(dto: UpdateUserDto): Promise<User>;
 }
 
-export const USER_REPOSITORY_PORT = 'USER_REPOSITORY_PORT';
+export const UserRepositoryHandle = 'UserRepository';

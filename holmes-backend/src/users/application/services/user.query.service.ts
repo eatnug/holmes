@@ -6,4 +6,4 @@ export interface UserQueryService {
   getUsers(): Promise<Array<User>>;
 }
 
-export const USER_QUERY_SERVICE = 'USER_QUERY_SERVICE';
+export const UserQueryServiceHandle = 'UserQueryService';

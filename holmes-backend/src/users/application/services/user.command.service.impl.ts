@@ -1,6 +1,6 @@
 import { User } from '../domain/user.model';
 import {
-  USER_REPOSITORY_PORT,
+  UserRepositoryHandle,
   UserRepository,
 } from '../repositories/user.repository';
 import { Inject, Injectable } from '@nestjs/common';
@@ -11,7 +11,7 @@ import { UpdateUserDto } from './dto/UpdateUserDto';
 @Injectable()
 export class UserCommandServiceImpl implements UserCommandService {
   constructor(
-    @Inject(USER_REPOSITORY_PORT)
+    @Inject(UserRepositoryHandle)
     private readonly userRepository: UserRepository,
   ) {}
 

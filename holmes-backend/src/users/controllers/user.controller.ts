@@ -1,5 +1,5 @@
 import {
-  USER_QUERY_SERVICE,
+  UserQueryServiceHandle,
   UserQueryService,
 } from '../application/services/user.query.service';
 import {
@@ -12,7 +12,7 @@ import {
   Put,
 } from '@nestjs/common';
 import {
-  USER_COMMAND_SERVICE,
+  UserCommandServiceHandle,
   UserCommandService,
 } from '../application/services/user.command.service';
 import { UpdateUserRequest } from './request/UpdateUserRequest';
@@ -21,9 +21,9 @@ import { CreateUserRequest } from './request/CreateUserRequest';
 @Controller('users')
 export class UserController {
   constructor(
-    @Inject(USER_QUERY_SERVICE)
+    @Inject(UserQueryServiceHandle)
     private readonly userQueryService: UserQueryService,
-    @Inject(USER_COMMAND_SERVICE)
+    @Inject(UserCommandServiceHandle)
     private readonly userCommandService: UserCommandService,
   ) {}
 

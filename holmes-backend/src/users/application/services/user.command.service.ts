@@ -8,4 +8,4 @@ export interface UserCommandService {
   updateUser(dto: UpdateUserDto): Promise<User>;
 }
 
-export const USER_COMMAND_SERVICE = 'USER_COMMAND_SERVICE';
+export const UserCommandServiceHandle = 'UserCommandService';

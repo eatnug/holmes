@@ -1,7 +1,7 @@
 import { User } from '../domain/user.model';
 import { UserQueryService } from './user.query.service';
 import {
-  USER_REPOSITORY_PORT,
+  UserRepositoryHandle,
   UserRepository,
 } from '../repositories/user.repository';
 import { Inject, Injectable } from '@nestjs/common';
@@ -10,7 +10,7 @@ import { GetUserDto } from './dto/GetUserDto';
 @Injectable()
 export class UserQueryServiceImpl implements UserQueryService {
   constructor(
-    @Inject(USER_REPOSITORY_PORT)
+    @Inject(UserRepositoryHandle)
     private readonly userRepository: UserRepository,
   ) {}
 
