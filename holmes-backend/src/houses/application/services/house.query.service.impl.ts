@@ -5,7 +5,7 @@ import {
   HouseRepository,
   HouseRepositoryHandle,
 } from '../ports/out/house.repository';
-import { SearchHouseByCoordinateDto } from './dto/search.house.by.coordinate.dto';
+import { HouseSearchDto } from './dto/search.house.by.coordinate.dto';
 import { HouseApi, HouseApiHandle } from '../ports/out/house.api';
 
 export class HouseQueryServiceImpl implements HouseQueryService {
@@ -16,7 +16,7 @@ export class HouseQueryServiceImpl implements HouseQueryService {
     private readonly houseApi: HouseApi,
   ) {}
 
-  searchByCoordinate(dto: SearchHouseByCoordinateDto): Promise<Array<House>> {
+  searchByCoordinate(dto: HouseSearchDto): Promise<Array<House>> {
     return this.houseApi.searchByCoordinate(dto);
   }
 }

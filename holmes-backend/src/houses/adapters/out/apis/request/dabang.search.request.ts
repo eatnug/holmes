@@ -2,7 +2,7 @@ import { HouseSearchDto } from '../../../../application/services/dto/search.hous
 import { encode } from 'ngeohash';
 import { Coordinate } from '../../../../application/domain/coordinate';
 
-export class ZigbangSearchRequest {
+export class DabangSearchRequest {
   geohash: string;
   depositMin: number;
   rentMin: number;
@@ -10,7 +10,7 @@ export class ZigbangSearchRequest {
   domain: 'zigbang';
   checkAnyItemWithoutFilter: true;
 
-  static from(dto: HouseSearchDto): ZigbangSearchRequest {
+  static from(dto: HouseSearchDto): DabangSearchRequest {
     const centerpoint: Coordinate = {
       longitude:
         dto.southWest.longitude +

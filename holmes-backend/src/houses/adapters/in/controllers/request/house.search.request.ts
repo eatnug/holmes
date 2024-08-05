@@ -1,6 +1,6 @@
 import { IsNumber, IsObject, ValidateNested } from 'class-validator';
 import { plainToInstance, Transform, Type } from 'class-transformer';
-import { SearchHouseByCoordinateDto } from '../../../../application/services/dto/search.house.by.coordinate.dto';
+import { HouseSearchDto } from '../../../../application/services/dto/search.house.by.coordinate.dto';
 
 class Coordinate {
   @IsNumber()
@@ -24,6 +24,6 @@ export class HouseSearchRequest {
   northEast: Coordinate;
 
   toDto() {
-    return new SearchHouseByCoordinateDto(this.southWest, this.northEast);
+    return new HouseSearchDto(this.southWest, this.northEast);
   }
 }

@@ -1,6 +1,6 @@
 import { Coordinate } from '../../domain/coordinate';
 
-export class SearchHouseByCoordinateDto {
+export class HouseSearchDto {
   constructor(
     public readonly southWest: Coordinate,
     public readonly northEast: Coordinate,
